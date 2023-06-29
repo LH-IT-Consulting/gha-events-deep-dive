@@ -1,0 +1,6 @@
+name: Main buid WF
+on:
+  workflow_dispatch:
+jobs:
+  sample-build:
+    uses: ./.github/workflows/dummy-build.yml
