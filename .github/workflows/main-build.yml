@@ -1,6 +1,11 @@
 name: Main buid WF
 on:
   workflow_dispatch:
+    inputs:
+      target-runner-label:
+        description: "Select target"
+        required: true
+        default: "dev"
 jobs:
   sample-independend-build:
     uses: ./.github/workflows/dummy-build.yml
