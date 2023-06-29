@@ -1,6 +1,6 @@
 name: Sample dummy buid WF
 on:
-  workflow_dispatch:
+  workflow_call:
 jobs:
   sample-build:
     runs-on: ubuntu-latest
