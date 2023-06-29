@@ -5,5 +5,7 @@ jobs:
   sample-build:
     runs-on: ubuntu-latest
     steps:
+      - name: Env check
+        run: echo "Target: ${{ github.event.inputs.target-runner-label}}"
       - name: Sample output
         run: echo "Performing dummy build..."
