@@ -14,3 +14,6 @@ jobs:
   sample-dependend-build:
     needs: sample-module-build
     uses: ./.github/workflows/dummy-build.yml
+  sample-final-build:
+    needs: [sample-independend-build, sample-dependend-build]
+    uses: ./.github/workflows/dummy-build.yml
