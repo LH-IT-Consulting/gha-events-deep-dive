@@ -2,5 +2,10 @@ name: Main buid WF
 on:
   workflow_dispatch:
 jobs:
-  sample-build:
+  sample-independend-build:
+    uses: ./.github/workflows/dummy-build.yml
+  sample-module-build:
+    uses: ./.github/workflows/dummy-build.yml
+  sample-dependend-build:
+    needs: sample-module-build
     uses: ./.github/workflows/dummy-build.yml
