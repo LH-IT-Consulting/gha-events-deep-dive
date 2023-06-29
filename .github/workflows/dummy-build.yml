@@ -1,0 +1,9 @@
+name: Sample dummy buid WF
+on:
+  workflow_dispatch:
+jobs:
+  sample-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sample output
+        run: echo "Performing dummy build..."
